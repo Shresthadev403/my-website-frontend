@@ -1,0 +1,10 @@
+npm run format
+npm run lint-fix
+
+# Get a list of staged files
+STAGED_FILES=$(git diff --name-only --cached)
+
+# Stage the formatted files
+for FILE in $STAGED_FILES; do
+  git add "$FILE"
+done
