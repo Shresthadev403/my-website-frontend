@@ -1,7 +1,16 @@
 import './App.css';
+import Body from './Body';
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
 
 function App() {
-  return <>this is website of jagadish shrestha</>;
+  return (
+    <>
+      <Header />
+      <Body />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
