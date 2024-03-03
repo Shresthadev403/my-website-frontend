@@ -1,0 +1,37 @@
+.side-card-left {
+    transform: perspective(1000px) rotateY(45deg);
+    opacity: 0.8; 
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .side-card-right {
+    transform: perspective(1000px) rotateY(-45deg);
+    opacity: 0.8; 
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .center-card {
+    opacity: 1;
+  }
+  .side-card-left:hover{
+    transform: perspective(1000px) rotateY(30deg);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.95;
+
+
+  }
+  .side-card-right:hover{
+    transform: perspective(1000px) rotateY(-30deg);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.95;
+
+  }
+  
+  /* .tilted-card{
+    transform: perspective(1000px) rotateY(96deg);
+    transition: 200;
+  } */
+
+ 
+  
+  /* Adjust transition duration and easing function as needed */
+  

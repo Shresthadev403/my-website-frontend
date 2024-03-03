@@ -9,14 +9,48 @@ import { FaTelegram } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 import { IoIosCall } from 'react-icons/io';
 import { FaGithub } from 'react-icons/fa';
+import Carousel3D from '../components/header/carouse3d/Carousel3D';
+
+//project image import
+// import rupseCoverImage from '../assets/projects/rupse/rupseCoverImage.png';
+
+const projects = [
+  {
+    title: 'Travel Booking',
+    description: 'A world-wide tour booking site',
+    image:
+      'https://images.unsplash.com/photo-1682685796444-acc2f5c1b7b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxzZWFyY2h8MzZ8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D',
+  },
+  {
+    title: 'Library system',
+    description: 'A system for library management',
+    image:
+      'https://images.unsplash.com/photo-1528208079124-a2387f039c99?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJvb2slMjBzaGVsZnxlbnwwfHwwfHx8MA%3D%3D',
+  },
+  {
+    title: 'NFC Bus Payment',
+    description: 'Smart GPS based NFC payment system',
+    image:
+      'https://images.unsplash.com/photo-1509017174183-0b7e0278f1ec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTExfHxidXMlMjBwYXltZW50fGVufDB8fDB8fHww',
+  },
+  {
+    title: 'Food Recipe Gen',
+    description: 'Generating recipe through ai text and images',
+    image:
+      'https://media.istockphoto.com/id/1004108530/photo/hand-holding-smartphone-taking-photo-of-beautiful-food-mix-fresh-green-salad.webp?b=1&s=170667a&w=0&k=20&c=0ji92aDcphAAoKyuo5DYTNdMDbAT450aeC57wRY5Y0Q=',
+  },
+
+  // Add more projects...
+];
 
 function Home() {
   return (
-    <>
-      <div className="flex h-96 flex-col md:flex-row">
+    <div className="relative">
+      {/* first section introduction*/}
+      <div className="flex  flex-col md:flex-row">
         {/* introduction part */}
 
-        <div className="w-full md:w-1/2 flex flex-col gap-1 justify-center ml-2 p-2 md:ml-12 lg:ml-20">
+        <div className="w-full md:w-1/2 flex flex-col gap-1 justify-center  p-2 md:ml-12 lg:ml-20">
           <h2 className="w-full text-xl font-medium flex items-center ">
             {' '}
             <BsDash /> Hello
@@ -70,6 +104,7 @@ function Home() {
             </div>
           </div>
         </div>
+        {/* image section */}
         <div className="md:w-1/2 flex justify-center  ">
           <div
             style={{
@@ -92,7 +127,11 @@ function Home() {
           </div>
         </div>
       </div>
-    </>
+      {/* second carouse3d section  */}
+      <div className=" w-full flex justify-center ">
+        <Carousel3D projects={projects} />
+      </div>
+    </div>
   );
 }
 
