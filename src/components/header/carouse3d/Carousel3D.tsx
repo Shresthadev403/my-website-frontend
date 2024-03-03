@@ -36,6 +36,7 @@ const Carousel3D: React.FC<Carousel3DProps> = ({ projects }) => {
       },
     ],
     beforeChange: (current: number, next: number) => {
+      console.log(`Current slide: ${current}`);
       setCurrentSlide(next); // Update current slide index before slide change
     },
   };
