@@ -1,3 +1,4 @@
+import myLogo from '../../assets/mylogo.png';
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Twirl as Hamburger } from 'hamburger-react';
@@ -18,7 +19,16 @@ function Header() {
   return (
     <nav>
       {/*desktop view */}
-      <div className="hidden md:flex w-full h-12 bg-ghost-white  gap-12 justify justify-center items-center">
+      <div className="hidden md:flex w-full h-14 bg-ghost-white  md:gap-6 lg:gap-12 justify-center items-center">
+        {/* logo */}
+        <span className=" absolute left-2 h-14 w-14 mx-2 ">
+          <img
+            src={myLogo}
+            alt="Jagadish Shrestha"
+            className="w-full h-full object-cover"
+          />
+        </span>
+
         <Link to="/">
           <span
             className={`${activePage === '' ? 'text-red-munsell' : ''} hover:text-red-munsell transition duration-300`}
@@ -73,7 +83,14 @@ function Header() {
       {/* mobile view */}
       <div className="md:hidden w-full  bg-ghost-white ">
         <div className="flex justify-center items-center h-12">
-          <span className="text-red-munsell font-extrabold mx-6">
+          <span className="absolute left-2 h-14 w-14 bg  mx-2 ">
+            <img
+              src={myLogo}
+              alt="Jagadish Shrestha"
+              className="w-full h-full object-cover"
+            />
+          </span>
+          <span className="text-red-munsell font-extrabold text-md mx-6">
             Jagadish Shrestha
           </span>
           <span className="absolute right-3 ">
