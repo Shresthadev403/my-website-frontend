@@ -128,8 +128,16 @@ function Home() {
         </div>
       </div>
       {/* second carouse3d section  */}
-      <div className=" w-full flex justify-center ">
+      <div className="px-6 w-full flex flex-col justify-center items-center  ">
+        <h2 className="w-11/12 mb-2 md:mb-0 text-center text-2xl md:text-3xl lg:text-4xl font-semibold ">
+          Projects
+        </h2>
         <Carousel3D projects={projects} />
+        <div className="w-11/12">
+          <button className="bg-red-munsell text-ghost-white px-2 py-1 ">
+            VIEW MORE PROJECTS
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -13,14 +13,14 @@
     opacity: 1;
   }
   .side-card-left:hover{
-    transform: perspective(1000px) rotateY(30deg);
+    transform: perspective(1000px) rotateY(20deg);
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0.95;
 
 
   }
   .side-card-right:hover{
-    transform: perspective(1000px) rotateY(-30deg);
+    transform: perspective(1000px) rotateY(-20deg);
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0.95;
 

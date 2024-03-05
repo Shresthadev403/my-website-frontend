@@ -3,7 +3,7 @@ import './Carousel3D.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { useState } from 'react'; // Import useState hook for managing state
+import { useState } from 'react';
 
 interface Project {
   title: string;
@@ -13,6 +13,23 @@ interface Project {
 
 interface Carousel3DProps {
   projects: Project[];
+}
+
+function ArrowButton(props: any) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        display: 'block',
+        backgroundColor: 'gray',
+        borderRadius: '300px',
+        padding: '0px',
+      }}
+      onClick={onClick}
+    />
+  );
 }
 
 const Carousel3D: React.FC<Carousel3DProps> = ({ projects }) => {
@@ -25,8 +42,8 @@ const Carousel3D: React.FC<Carousel3DProps> = ({ projects }) => {
     centerPadding: '0px',
     slidesToShow: 3,
     autoplay: true,
-    // nextArrow: <SampleNextArrow />,
-    // prevArrow: <SamplePrevArrow />,
+    nextArrow: <ArrowButton />,
+    prevArrow: <ArrowButton />,
     responsive: [
       {
         breakpoint: 640,
@@ -37,12 +54,12 @@ const Carousel3D: React.FC<Carousel3DProps> = ({ projects }) => {
     ],
     beforeChange: (current: number, next: number) => {
       console.log(`Current slide: ${current}`);
-      setCurrentSlide(next); // Update current slide index before slide change
+      setCurrentSlide(next);
     },
   };
 
   return (
-    <div className="relative w-11/12">
+    <div className="relative w-11/12 ">
       <Slider {...settings}>
         {projects.map((project: Project, index: number) => (
           <div

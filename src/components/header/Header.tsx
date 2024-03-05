@@ -19,7 +19,7 @@ function Header() {
   return (
     <nav>
       {/*desktop view */}
-      <div className="hidden md:flex w-full h-14 bg-ghost-white  md:gap-6 lg:gap-12 justify-center items-center">
+      <div className="hidden relative md:flex w-full h-14 bg-ghost-white  md:gap-6 lg:gap-12 justify-center items-center">
         {/* logo */}
         <span className=" absolute left-2 h-14 w-14 mx-2 ">
           <img
